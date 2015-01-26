@@ -1,4 +1,4 @@
-此API将向用户发送一条消息通知，您可以定制这条消息通知的内容与图标，这条消息通知会被派发至LydiaBox的本地存储中，并可随时被用户删除。
+此 API 将向用户发送一条消息通知，您可以定制这条消息通知的内容与图标，这条消息通知会被派发至云集的本地存储中，并可随时被用户删除。
 
 ![Web Notification](%image_url%/notification_demo.gif)
 
@@ -6,7 +6,7 @@
 * iOS (1.0.0)
 
 ## 权限
-不论是hosted web app或packaged web app，访问此API的权限默认关闭，需要提示用户，经过授权后才能调用。
+不论是 hosted web app 或 packaged web app，访问此 API 的权限默认关闭，需要提示用户，经过授权后才能调用。
 
 ## 构造函数
 ```javascript
@@ -45,7 +45,7 @@ Notification.requestPermission(callback);
 ```javascript
 notification.close();
 ```
-此方法用于关闭只被展示一次的提示，并不会将LydiaBox中本地的通知删除，要删除LydiaBox中本地存储的消息通知，只能通过用户。
+此方法用于关闭只被展示一次的提示，并不会将云集中本地的通知删除，要删除云集中本地存储的消息通知，只能通过用户。
 
 ## 例子
 

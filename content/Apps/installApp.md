@@ -2,6 +2,7 @@
 
 ## 支持的平台
 * iOS (1.2.7)
+* Android (1.2)
 
 ## 权限
 此权限默认关闭。
@@ -24,7 +25,7 @@ navigator.apps.installApp(app, callback);
 ## 例子
 
 ```
-navigator.apps.install({
+navigator.apps.installApp({
 	name: 'Clear',
 	url: 'http://clear.evanyou.me',
 	iconURL: 'http://clear.evanyou.me/apple-touch-icon-precomposed.png',
