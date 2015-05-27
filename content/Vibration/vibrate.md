@@ -9,13 +9,13 @@ navigator.notification.vibrate(time);
 
 * **time:**以毫秒为单位的设备震动时长，以毫秒为单位。*（Number）*
 
-##范例
+## 范例
 ```
 // 震动2.5秒
 navigator.notification.vibrate(2500);
 ```
 
-##iOS Quirks
+## iOS Quirks
 * **time：**忽略时长参数，震动时长为预先设定值。
 
 ```
