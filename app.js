@@ -23,7 +23,7 @@ app.engine('html', require('hogan-express'));
 
 // Setup Express
 app.use(favicon(__dirname +'/public/favicon.ico'));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
