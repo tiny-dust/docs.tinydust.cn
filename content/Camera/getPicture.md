@@ -1,11 +1,11 @@
-此 API 可调用系统默认的相机 App 来拍摄一张照片，并将照片数据通过 Base64 编码传递给 Web App。
+此 API 可调用系统默认的相机 App 来拍摄一张照片，并将照片数据通过 dataURI 传递给 Web app。
 
 ## 支持的平台
 * iOS (1.1)
 * Android (1.3)
 
 ## 权限
-hosted web app 需要用户授权，packaged web app 默认开启。
+hosted Web app 需要用户授权，packaged Web app 默认开启。
 
 ## 方法
 

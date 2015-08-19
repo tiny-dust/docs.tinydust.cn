@@ -7,7 +7,7 @@
 * Android (1.1)
 
 ## 权限
-不论是 hosted web app 或 packaged web app，访问此 API 的权限默认关闭，需要提示用户，经过授权后才能调用。
+不论是 hosted Web app 或 packaged Web app，访问此 API 的权限默认关闭，需要提示用户，经过授权后才能调用。
 
 ## 构造函数
 ```javascript

@@ -26,8 +26,6 @@ navigator.apps.install('http://cdn.lydiabox.com/apps/lydiagapdemo/manifest.webap
     return console.log(err);
   }
 
-  navigator.notification.alert(result.app.name + ' 已添加至云集', function () {
-    // update your record or do your stuff.
-  }, '添加成功', '好');
+  var notification = new Notification(result.app.name + ' 已添加至云集');
 });
 ```
