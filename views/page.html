@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row row-box">
     <div class="col-sm-3">
-
-        <ul class="menu">
+        <div class="cover"></div>
+        <ul class="menu side">
         {{#pages}}
             {{#is_index}}
                 {{#files}}
@@ -22,7 +22,7 @@
         </ul>
 
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-9 content-box">
 
         <section class="content">
             {{#meta.title}}<h1 class="title">{{meta.title}}</h1>{{/meta.title}}

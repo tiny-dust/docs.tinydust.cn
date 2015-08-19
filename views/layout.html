@@ -5,40 +5,54 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{#meta.title}}{{meta.title}} - {{/meta.title}}{{config.site_title}}</title>
 	{{#meta.description}}<meta name="description" content="{{meta.description}}">{{/meta.description}}
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/bower_components/highlightjs/styles/solarized_light.css">
-	<link rel="stylesheet" href="/styles/raneto.css">
+	<link rel="stylesheet" href="/styles/style.css">
+	<link rel="stylesheet" media="screen and (min-device-width: 750px)" href="/styles/pc.css">
+	<link rel="stylesheet" media="screen and (max-device-width: 749px)" href="/styles/mobile.css">
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
 	{{{config.analytics}}}
 </head>
 <body class="{{body_class}}">
-
 	<header class="header">
+
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-6">
+				<img class="header-icon" id="left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAQAAAA4sZfFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQffBQkXKzmqSAQ0AAAANUlEQVQ4y2P8/5+BKoCJOsYMRoMY/9tQy6hRQAgw/pejlkGjKZsQoFpgjwLCgGrFyGjKJgwA5A0KxHzOL9YAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDUtMDlUMjM6NDM6NTcrMDg6MDCduFOMAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA1LTA5VDIzOjQzOjU3KzA4OjAw7OXrMAAAAABJRU5ErkJggg==" width="23" height="23">
+				<a id="title" href="/" class="logo">{{config.site_title}}</a>
+				<img class="header-icon" id="right" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQffBQkXKzozQVWOAAAB9UlEQVRIx+2WPUsDQRCG34sgMZgihcaPCIm9jVaCgl1MYekvEE1rJSIWgljbCcEynbEzoIVaCoIiqCAhYiEaTBq/UBDR18K59TC3txtJ6TQ7ZJ57uNm57J2DumAXJpBBEj2IoYYKStjCjvOMvwQHWOQn6+ONOXY3KmvjOj+ojxfO07HXJXhMcxQYsdXdei475ByHGGcrExzlCsue2gHDNs3+3N0503X1Fk7xThF5s3BdwRu6ltjLI0VlTZP9ULqATWc7T4WrMhokLKpmDRvOJB+FXdJDXeq5S8MYXBD2Wo9Mu5M16wBG+CT8oD8RQkayTRuh84ptSTM6YUqyfRshgD1Zkzqh+w+9sRS6XI9OGJPs3lL4IGvMvxxCTbJOS2GHrDX/cggVyVI2Ng9X8S+HUJJs3FLoTrekqXNSnqsyW8w2xvkmfL8OiSpkykK4JuxZEJQT6I69Bt0I34WdCcK6+SLYEdsDuH7WhLswbA/n1Ul3yqT27lzdp/EYocOCUj5y4fcxxjjXVLPkcpBLDlRGsIth9esztrGHG9yjEylkMIZWzzWXGHNuYQqGmTe+89yTs2wanyvNshqgu2Caq40qo1zitY/sjDPfkzUpfV9KHPz9beNceaqrmG1gL636aLTxf+W/Uqs8aZLQo+xrnnKRVeaapvPGF+shpWuJSYLsAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA1LTA5VDIzOjQzOjU4KzA4OjAwa/AjZQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNS0wOVQyMzo0Mzo1OCswODowMBqtm9kAAAAASUVORK5CYII=" width="23" height="23">
+				<form class="search-form form-inline pull-right" role="form" action="/">
+					<div class="form-group">
+						<label class="sr-only" for="search"></label>
+						<input type="search" class="form-control" name="search" id="search" size="30" value="{{search}}" placeholder="搜索知识库" autocomplete="off">
+						<button type="submit" class="btn btn-primary btn-lg">
+							<img src="/images/search.png" width="25" height="25">
+						</button>
+					</div>
+				</form>
 
-					<a href="/" class="logo">{{config.site_title}}</a>
-
-				</div>
-				<div class="col-sm-6">
-
-					<form class="search-form form-inline pull-right" role="form" action="/">
-						<div class="form-group">
-							<label class="sr-only" for="search">Search</label>
-							<input type="search" class="form-control" name="search" id="search" size="30" value="{{search}}" placeholder="Search">
-						</div>
-					</form>
-
-				</div>
 			</div>
 		</div>
 	</header>
+	{{#meta.title}}<h1 id="target" class="title" style="display:none;">{{meta.title}}</h1>{{/meta.title}}
+	<script type="text/javascript">
+		if (location.pathname !== '/') {
+			if ($('.header').css('height') !== '80px')
+      	$('#title').html($('#target').html());
+			$('header').addClass('doc');
+    	$('body').addClass('doc');
+    }
+    if (location.search !== '') {
+    	$('header').addClass('doc');
+    	$('body').addClass('doc');
+    }
+	</script>
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="padding: 0;margin-bottom: 100px;">
 		{{{ yield }}}
 	</div>
 
@@ -52,7 +66,6 @@
 		</div>
 	</footer>
 
-	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="/bower_components/highlightjs/highlight.pack.js"></script>
 	<script src="/bower_components/fitvids/jquery.fitvids.js"></script>
