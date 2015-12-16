@@ -1,4 +1,4 @@
-此 API 可以让 Web App 命令云集直接启动另一个 Web App，相当于传统浏览器中的 `window.open`
+此 API 可以让 Web app 命令云集直接启动另一个 Web app，相当于传统浏览器中的 `window.open`
 
 ## 支持的平台
 * iOS (1.7)
@@ -13,7 +13,7 @@
 navigator.apps.run(app);
 ```  
 
-* app: 需要运行的 Web App。
+* app: 需要运行的 Web app。
 	* name: App 的名字。
 	* url: App 的网址。
 	* iconURL: App 的图标地址。
