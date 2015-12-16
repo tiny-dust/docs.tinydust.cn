@@ -14,6 +14,23 @@ body {
   padding: 0 16px 100px 16px;
 }
 
+p, .category-title, .panel-heading {
+  font-size: 14px !important;
+}
+
+.category-title, .panel-heading {
+  font-weight: normal !important;
+}
+
+p img {
+  display: block;
+  margin: 20px auto !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
 .footer p {
    width: 100%;
    text-align: center;
@@ -31,6 +48,23 @@ h1.title {
   font-size: 36px;
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+h2 {
+  margin: 20px 0 !important;
+}
+
+h3 {
+  margin: 20px 0 !important;
+}
+
+.content ul {
+  margin: 0 20px;
+}
+
+.content > ul {
+  margin: 20px;
+  font-size: 14px !important;
 }
 
 .page-title {
@@ -97,6 +131,7 @@ h1.title {
 
 pre {
   position: relative;
+  margin: 15px 0 !important;
   padding: 0;
   border-style: none;
   border-left: 4px solid #c3d8eb;
@@ -122,6 +157,7 @@ pre .line-num {
   padding: 0 0 0 10px;
   font-size: 12px;
   color: #c3d8eb;
+  list-style: decimal;
   background-color: rgba(0,0,0,0);
   pointer-events: none;
 }
@@ -132,8 +168,3 @@ pre .line-num li {
   padding: 0;
   border-bottom: 1px solid #eef5fa;
 }
-
-
-
-
-
