@@ -1,7 +1,7 @@
 var config = {
 
 	// Your site title (format: page_title - site_title)
-	site_title: '云集 Web app 开发文档',
+	site_title: 'Tinydust Documentation',
 
 	// The base URL of your site (can use %base_url% in Markdown files)
 	base_url: '',
