@@ -1,6 +1,6 @@
 ### Link 向 Action 服务器发送数据
 
-Link 会根据 webaction.json 中的配置将需要的参数发送给 Action, 如下面示例中根据需要发送给 Action 一段文字和一张图片, 更多数据类型请参考[数据类型](/Link/Web%20action%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%8C%87%E5%8D%97)
+Link 会根据 [webaction.json](/Link/webaction.json%20%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97) 中的配置将需要的参数发送给 Action, 如下面示例中根据需要发送给 Action 一段文字和一张图片, 更多数据类型请参考[数据类型](/Link/Web%20action%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%8C%87%E5%8D%97)
 
 ```
 {
