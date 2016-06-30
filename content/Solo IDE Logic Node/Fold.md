@@ -1,6 +1,6 @@
-# Fold
 fold 为一个迭代累加器
 
+```
 function (initial, fomula, arrayOrObject) {
   let total = initial
   if (typeof arrayOrObject === 'array') {
@@ -12,8 +12,9 @@ function (initial, fomula, arrayOrObject) {
   }
   return total
 }
+```
 
-Fomula 为处理每个元素的公式
-old 为初始值
-a 为输入
-输出为 total
+Fomula 为处理每个元素的公式  
+old 为初始值  
+a 为输入  
+输出为 total  
