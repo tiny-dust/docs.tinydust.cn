@@ -175,3 +175,17 @@ pre .line-num li {
   border-bottom: 1px solid #eef5fa;
 }
 
+dt {
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+dt::after {
+  content: ":";
+}
+
+dd {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
