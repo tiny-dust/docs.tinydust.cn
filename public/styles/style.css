@@ -14,6 +14,11 @@ body {
   padding: 0 16px 100px 16px;
 }
 
+p {
+  line-height: 1.5em;
+  margin: 1em 0;
+}
+
 p, .category-title, .panel-heading {
   font-size: 14px !important;
 }
@@ -168,3 +173,4 @@ pre .line-num li {
   padding: 0;
   border-bottom: 1px solid #eef5fa;
 }
+
