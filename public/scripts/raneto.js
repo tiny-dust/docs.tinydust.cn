@@ -22,16 +22,17 @@
             });
         }
 
-        var panelHeading = $('.panel-heading');
-    		var categoryTitle = $('.category-title');
-    		for (var i = 0, l = panelHeading.length; i < l; i++) {
-    			var str = panelHeading[i].innerHTML.replace(/ /g, '').toLowerCase();
-    			if (str === 'reactnativeios') panelHeading[i].innerHTML = 'React Native iOS';
-    		}
-    		for (var i = 0, l = categoryTitle.length; i < l; i++) {
-    			var str = categoryTitle[i].innerHTML.replace(/ /g, '').toLowerCase();
-    			if (str === 'reactnativeios') categoryTitle[i].innerHTML = 'React Native iOS';
-    		}
+        // Raneto sucks because it _s.titlize(_s.humanize(everyOtherTitle))
+        // The following are thus required to recover the title AS IS provided.
+        titleAsIs([
+            "云集浏览器 API",
+            "云集浏览器 React Native iOS",
+            "Solo IDE Logic Nodes",
+            "Solo IDE Logic Tutorials",
+        ]);
+        headingAsIs([
+            "AJAX",
+        ]);
 
         $('img#right').click(function () {
             if ($('.header').hasClass('show')) {
@@ -94,4 +95,37 @@
 
     });
 
+    // make the title look AS IS the provided string
+    function titleAsIs(titles)
+    {
+        keepAsIs($('.panel-heading, .category-title').toArray(), titles);
+    }
+
+    // make the heading look AS IS the provided string
+    function headingAsIs(headings)
+    {
+        keepAsIs($('li.page > a, h1').toArray(), headings);
+    }
+
+    // make the text content look AS IS the provided string
+    function keepAsIs(elements, titles)
+    {
+        var map = titles.reduce((map, title) => {
+            map[cleanTitle(title)] = title;
+            return map;
+        }, {});
+
+        elements
+            .map(el => ({ el, title: cleanTitle(el.textContent) }))
+            .filter(m => map[m.title])
+            .forEach(m => m.el.textContent = map[m.title]);
+    }
+
+    // to lower case and remove spaces
+    // This works because Raneto did _s.humanize() on the titles
+    function cleanTitle(title)
+    {
+        return title.toLowerCase().replace(/\s/g, '');
+    }
 })(jQuery, hljs);
+
