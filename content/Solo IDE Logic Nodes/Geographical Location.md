@@ -42,7 +42,7 @@ stopped by `Stop Watching Location` node.
 ## Stop Watching Location
 Stop watching location by the given `Handle`.
 
-This node is usually used along side a `Trigger` node from Utilities,
+This node is usually used along side a `Trigger` node from Utility,
 to allow another stream to control when to output the `Handle` to this node.
 
 <dl>
