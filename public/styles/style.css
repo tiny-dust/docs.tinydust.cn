@@ -12,6 +12,12 @@ body {
 
 .content {
   padding: 0 16px 100px 16px;
+  font-size: 14px
+}
+
+p {
+  line-height: 1.5em;
+  margin: 1em 0;
 }
 
 p, .category-title, .panel-heading {
@@ -168,3 +174,18 @@ pre .line-num li {
   padding: 0;
   border-bottom: 1px solid #eef5fa;
 }
+
+dt {
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+dt::after {
+  content: ":";
+}
+
+dd {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
